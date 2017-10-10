@@ -24,8 +24,8 @@ int main() {
     cin>>cases;
     while( cases-- ) {
        // scanf("%d %d %d %d %d %d %d", &a, &b, &c, &d, &e, &f, &n);
-        cin>>dp[0]>>dp[1]>>dp[2]>>dp[3]>>dp[4]>>dp[5]>>dp[6];
-        cout<<"Case "<<++caseno<<": "<<fn(dp[6])%10000007<<endl;
+        cin>>dp[0]>>dp[1]>>dp[2]>>dp[3]>>dp[4]>>dp[5]>>n;
+        cout<<"Case "<<++caseno<<": "<<fn(n)%10000007<<endl;
         for(int i=0;i<MAX;i++)
         {
             dp[i]=-1;
