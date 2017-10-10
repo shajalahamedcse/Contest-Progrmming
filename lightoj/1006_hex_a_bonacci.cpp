@@ -21,7 +21,7 @@ int main() {
         printf("Case %d: %d\n", ++caseno, fn(n) % 10000007);
         for(int i=0;i<MAX;i++)
         {
-            dp[MAX]=-1;
+            dp[i]=-1;
         }
     }
     return 0;
