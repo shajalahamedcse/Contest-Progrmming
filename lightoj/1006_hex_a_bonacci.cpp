@@ -15,7 +15,7 @@ long long int fn(long long int n ) {
     if( n == 5 ) return f;
     */
     else{
-    dp[n]= fn(n-1) + fn(n-2) + fn(n-3) + fn(n-4) + fn(n-5) + fn(n-6) ;
+    dp[n]= (fn(n-1) + fn(n-2) + fn(n-3) + fn(n-4) + fn(n-5) + fn(n-6))%10000007 ;
     return dp[n];
     }
 }
