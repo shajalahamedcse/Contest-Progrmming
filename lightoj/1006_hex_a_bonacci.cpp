@@ -1,9 +1,11 @@
 #include<stdio.h>
+#include<iostream>
+using namespace std;
 #define MAX 10000
-int dp[MAX];
+long long int dp[MAX];
 
-int a, b, c, d, e, f;
-int fn( int n ) {
+long long int a, b, c, d, e, f;
+long long int fn(long long int n ) {
     if(dp[n]!=-1) return dp[n];
     if( n == 0 ) return a;
     if( n == 1 ) return b;
@@ -11,14 +13,16 @@ int fn( int n ) {
     if( n == 3 ) return d;
     if( n == 4 ) return e;
     if( n == 5 ) return f;
-    return(dp[n]= fn(n-1) + fn(n-2) + fn(n-3) + fn(n-4) + fn(n-5) + fn(n-6) );
+    dp[n]= fn(n-1) + fn(n-2) + fn(n-3) + fn(n-4) + fn(n-5) + fn(n-6) ;
+    return dp[n];
 }
 int main() {
-    int n, caseno = 0, cases;
-    scanf("%d", &cases);
+    long long int  n, caseno = 0, cases;
+    cin>>cases;
     while( cases-- ) {
-        scanf("%d %d %d %d %d %d %d", &a, &b, &c, &d, &e, &f, &n);
-        printf("Case %d: %d\n", ++caseno, fn(n) % 10000007);
+       // scanf("%d %d %d %d %d %d %d", &a, &b, &c, &d, &e, &f, &n);
+        cin>>a>>b>>c>>d>>e>>f>>n;
+        cout<<"Case "<<++caseno<<": "<<fn(n)%10000007<<endl;
         for(int i=0;i<MAX;i++)
         {
             dp[i]=-1;
